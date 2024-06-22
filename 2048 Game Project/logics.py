@@ -43,4 +43,18 @@ def get_curr_state(mat):
             return "Game Not Over"
         
     return "LOST"
+
+def compress(mat):
+    new_mat=[]
+    for i in range(4):
+        new_mat.append([0]*4)
+    
+    for i in range(4):
+        pos=0
+        for j in range(4):
+            if mat[i][j] !=0:
+                mat[i][pos]=mat[i][j]
+                pos+=1
+    return new_mat
+
     
